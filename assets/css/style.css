@@ -486,7 +486,6 @@ body.show-menu {
 .our-projects .slider-container {
     position: relative;
     display: flex;
-    /* align-items: flex-start; */
     gap: 8px;
     transition: 0.5s ease;
 }
@@ -697,6 +696,7 @@ body.show-menu {
     margin-block-start: 2rem;
     border-radius: var(--radius-10);
     box-shadow: var(--box-shadow);
+    margin-inline: auto;
 }
 
 /*-----------------------------------*\
@@ -873,6 +873,42 @@ body.show-menu {
 .project-statistics .ending {
     margin-block: 1rem;
     font-size: 1rem;
+}
+
+/*-----------------------------------*\
+  GALLERY
+\*-----------------------------------*/
+
+.gallery .container {
+    display: grid;
+    gap: 1rem;
+}
+
+.gallery .title {
+    margin-block-end: 1rem;
+    text-align: center;
+}
+
+.gallery .gallery-collection {
+    display: grid;
+    gap: 1rem;
+}
+
+.gallery .gallery-card {
+    position: relative;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: var(--radius-10);
+    box-shadow: var(--mild-box-shadow);
+}
+
+.gallery .gallery-image {
+    transition: var(--transition-1);
+}
+
+.gallery .gallery-image:hover {
+    box-shadow: var(--box-shadow);
+    scale: 1.1;
 }
 
 /*-----------------------------------*\
@@ -1070,6 +1106,10 @@ body.show-menu {
     .section.page-header {
         margin-inline: 0;
     }
+
+    .gallery .gallery-collection {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 875px) and (max-width: 1149px) {
@@ -1080,6 +1120,10 @@ body.show-menu {
     .section.hero,
     .section.page-header {
         margin-inline: 0;
+    }
+
+    .gallery .gallery-collection {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1162,6 +1206,10 @@ body.show-menu {
 
     .our-projects .content .button-wrapper {
         justify-content: left;
+    }
+
+    .gallery .gallery-collection {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .work-with-us {
